@@ -1,0 +1,1 @@
+web3j solidity generate --javaTypes ../src/main/resources/contracts/voting/build/Election.bin ../src/main/resources/contracts/voting/build/Election.abi -o ../src/main/java -p org.han.ica.oose.sneeuwklokje.contracts

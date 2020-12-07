@@ -1,0 +1,1 @@
+solc ../src/main/resources/contracts/voting/Election.sol --bin --abi --optimize --overwrite -o ../src/main/resources/contracts/voting/build

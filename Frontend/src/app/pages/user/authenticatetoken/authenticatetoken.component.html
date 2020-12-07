@@ -1,0 +1,35 @@
+<ngx-spinner
+bdColor = "rgba(51, 51, 51, 0.8)"
+size = "large"
+color = "#fff"
+type = "line-spin-clockwise-fade"
+></ngx-spinner>
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="https://pbs.twimg.com/profile_images/482471128279957505/BFshk7fm.png" id="icon" alt="User Icon" />
+      </div>
+
+      <!-- Login Form -->
+      <div class="description">
+        Om te kunnen stemmen, moet u de code hieronder invoeren dat u heeft ontvangen.
+      </div>
+      <!-- <form> -->
+        <input type="text" [(ngModel)]="tokenField" id="inputToken" class="fadeIn second" name="tokenField" placeholder="token" autofocus>
+        <input type="submit" (click)="postToken()" class="fadeIn fourth" value="Authenticeer">
+      <!-- </form> -->
+
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Ga terug</a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+<particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>

@@ -1,0 +1,14 @@
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+.top-space-30 {
+  margin-top: 30px;
+}
+
+.top-space-50 {
+  margin-top: 50px;
+}

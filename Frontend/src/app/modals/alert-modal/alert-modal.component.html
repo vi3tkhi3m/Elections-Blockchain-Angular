@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <div class="icon-box" style="margin: 0 auto">
+        <i class="material-icons">&#xE5CD;</i>
+      </div>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body text-center">
+    <h4>Ooops!</h4>	
+    <p>{{message}}</p>
+    <button class="btn btn-success" (click)="activeModal.close('Close click')">Probeer opnieuw</button>
+  </div>

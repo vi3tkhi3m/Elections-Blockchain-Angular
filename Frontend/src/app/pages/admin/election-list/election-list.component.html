@@ -1,0 +1,48 @@
+<ngx-spinner
+bdColor = "rgba(51, 51, 51, 0.8)"
+size = "large"
+color = "#fff"
+type = "line-spin-clockwise-fade"
+loadingText={{loadingText}}
+></ngx-spinner>
+
+<div class="top-space-30">
+  <h2 class="text-center" *ngIf='routeName === "election-list"'>Verkiezing sluiten</h2>
+  <h2 class="text-center" *ngIf='routeName === "election-publish"'>Verkiezing publiceren</h2>
+</div>
+
+<div class="container top-space-30">
+  <div class="row justify-content-md-center">
+    <div class="col-md-8">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Naam</th>
+            <th scope="col" *ngIf='routeName === "election-list"'>Eind Datum</th>
+            <th scope="col" *ngIf='routeName === "election-list"'>Timer</th>
+            <th scope="col">Actie</th>
+          </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf='routeName === "election-list"'>
+            <tr *ngFor="let el of elections; let i = index">
+              <th scope="row">{{ el.electionID }}</th>
+              <td>{{ el.electionName }}</td>
+              <td>{{ el.endDate }}</td>
+              <td><countdown-timer [end]="el.endDate"></countdown-timer></td>
+              <td><button class='btn btn-danger btn-xs action-button' (click)="showWarning(el.electionID, i, el.electionName)"> Sluiten</button></td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf='routeName === "election-publish"'>
+            <tr *ngFor="let el of elections; let i = index">
+              <th scope="row">{{ el.electionID}}</th>
+              <td>{{ el.electionName }}</td>
+              <td><button class='btn btn-success btn-xs action-button' (click)="showWarning(el.electionID, i, el.electionName)"> Publiceer</button></td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
